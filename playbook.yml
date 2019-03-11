@@ -1,13 +1,5 @@
 ---
 - hosts: tag_Name_rke
   become: true
-
-  tasks:
-  - debug:
-      msg: "before we run our role"
-  - import_role:
-      name: ansible-role-docker
-  - include_role:
-      name: ansible-role-docker
-  - debug:
-      msg: "after we ran our role"
+  roles:
+    - ansible-role-docker
