@@ -1,13 +1,13 @@
 ---
-- hosts: localhost
-  connection: local
+- hosts: tag_Name_rke
+  become: true
 
   tasks:
   - debug:
       msg: "before we run our role"
   - import_role:
-      name: geerlingguy.docker
+      name: ansible-role-docker
   - include_role:
-      name: geerlingguy.docker
+      name: ansible-role-docker
   - debug:
       msg: "after we ran our role"
