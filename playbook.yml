@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_rke
+- hosts: k8s-cluster
   become: true
   roles:
     - ansible-role-docker
