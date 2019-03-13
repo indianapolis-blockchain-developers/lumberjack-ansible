@@ -1,5 +1,5 @@
 ---
-- hosts: k8s-cluster
+- hosts: tag_Name_k8s-cluster
   become: true
   roles:
     - ansible-role-docker
