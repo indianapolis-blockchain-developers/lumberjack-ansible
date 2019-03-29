@@ -1,2 +1,6 @@
 ---
 # tasks file for kubernetes-deploy
+
+- name: Perform a System Prep on Centos Atomic Host
+  shell: /files/atomic_prep.sh
+
