@@ -11,4 +11,6 @@
     mkdir /opt/cni /etc/cni
     chcon -Rt svirt_sandbox_file_t /etc/cni
     chcon -Rt svirt_sandbox_file_t /opt/cni
+    mount --make-shared /
+    
 
