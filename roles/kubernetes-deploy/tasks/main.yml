@@ -3,10 +3,10 @@
 
 - name: Perform a System Prep on Centos Atomic Host
   shell: |
-    sudo atomic host upgrade
-    sudo groupadd docker
-    sudo usermod -aG docker centos
-    sudo chown centos /var/run/docker.sock
+    atomic host upgrade
+    groupadd docker
+    usermod -aG docker centos
+    chown centos /var/run/docker.sock
     systemctl cat docker | grep -i mount
     mkdir /opt/cni /etc/cni
     chcon -Rt svirt_sandbox_file_t /etc/cni

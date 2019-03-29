@@ -2,5 +2,5 @@
 - hosts: tag_role_k8s_cluster
   become: true
   roles:
-    - ansible-role-docker
+    # - ansible-role-docker
     - kubernetes-deploy
