@@ -1,0 +1,16 @@
+---
+# tasks file for kubernetes-deploy
+
+- name: Perform a System Prep on Centos Atomic Host
+  shell: |
+    atomic host upgrade
+    groupadd docker
+    usermod -aG docker centos
+    chown centos /var/run/docker.sock
+    systemctl cat docker | grep -i mount
+    mkdir /opt/cni /etc/cni
+    chcon -Rt svirt_sandbox_file_t /etc/cni
+    chcon -Rt svirt_sandbox_file_t /opt/cni
+    mount --make-shared /
+    
+
